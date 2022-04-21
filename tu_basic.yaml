@@ -1,0 +1,32 @@
+name: TU-Base
+author: TORTONIGHT
+description: TU Base Hosted | www.tunit.net |
+
+tasks:
+  - action: download_github
+    src: https://github.com/tortonight/TU-Base-txAdminRecipe
+    dest: ./temp/
+
+  - action: move_path
+    src: ./temp/resources
+    dest: ./resources
+    overwrite: true
+
+  - action: move_path
+    src: ./temp/server.cfg
+    dest: ./server.cfg
+    overwrite: true
+
+  - action: move_path
+    src: ./temp/TU-logo.png
+    dest: ./TU-logo.png
+    overwrite: true
+  
+  - action: connect_database
+
+  - action: query_database
+    file: ./temp/tubaseserv.sql
+
+  ## Cleanup
+  - action: remove_path
+    path: ./tmp
