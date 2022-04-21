@@ -1,7 +1,11 @@
+$engine: 3
+$onesync: on
 name: TU-Base
+version: 1.0.0
 author: TORTONIGHT
 description: TU Base Hosted | www.tunit.net |
 
+   ## Downloads
 tasks:
   - action: download_github
     src: https://github.com/tortonight/TU-Base-txAdminRecipe
@@ -29,4 +33,4 @@ tasks:
 
   ## Cleanup
   - action: remove_path
-    path: ./tmp
+    path: ./temp
